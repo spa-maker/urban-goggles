@@ -16,6 +16,5 @@ RUN adduser --disabled-password \
     ${NB_USER}
     
 RUN usermod -a -G sudo ${NB_USER}
-RUN 
 WORKDIR ${HOME}
 USER ${USER}
