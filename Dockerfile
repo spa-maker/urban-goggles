@@ -11,7 +11,11 @@ ENV HOME /home/${NB_USER}
 
 RUN adduser --disabled-password \
     --gecos "Default user" \
-    --uid 0 \
+    --uid NB_UID \
+    -system /
     ${NB_USER}
+    
+RUN usermod -a -G sudo ${NB_USER}
+RUN 
 WORKDIR ${HOME}
 USER ${NB_USER}
