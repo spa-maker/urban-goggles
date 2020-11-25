@@ -12,7 +12,7 @@ ENV HOME /home/${NB_USER}
 RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
-    -r \
+    --system \
     --gid 0 \
     ${NB_USER}
     
